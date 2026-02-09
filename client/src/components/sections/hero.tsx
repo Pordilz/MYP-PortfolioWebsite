@@ -132,7 +132,7 @@ export function Hero() {
               >
                 The Vault <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <a href="/cv.pdf" download>
+              <a href={`${import.meta.env.BASE_URL}cv.pdf`} download="Muhammad_Paruk_CV.pdf">
                 <Button
                   size="lg"
                   className="bg-primary text-white hover:bg-primary/90 border-2 border-black shadow-hard hover:translate-y-[2px] hover:shadow-hard-sm transition-all text-lg h-14 px-8"
