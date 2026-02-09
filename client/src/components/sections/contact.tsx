@@ -26,13 +26,39 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out, Muhammad will get back to you soon.",
-    });
-    form.reset();
+  // TODO: Replace this with your actual Formspree Form ID
+  // 1. Go to https://formspree.io/
+  // 2. Create a new form
+  // 3. Copy the Form ID (it looks like "xkqjwnqz")
+  const FORMSPREE_FORM_ID = "mwvnpyep";
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thanks for reaching out, Yahya will get back to you soon.",
+        });
+        form.reset();
+      } else {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or email directly.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
