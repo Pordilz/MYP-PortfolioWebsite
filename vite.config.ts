@@ -36,7 +36,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
-  base: "./",
+  base: "/MYP-PortfolioWebsite/",
   build: {
     outDir: "dist",
     emptyOutDir: true,
