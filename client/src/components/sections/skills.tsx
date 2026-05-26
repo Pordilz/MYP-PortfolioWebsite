@@ -2,24 +2,24 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Backend & Languages",
-    skills: ["Python", "Java", "Kotlin", "PostgreSQL"],
-    color: "bg-blue-100",
-  },
-  {
-    title: "Frontend",
-    skills: ["TypeScript", "JavaScript", "React", "HTML & CSS", "SvelteKit"],
-    color: "bg-yellow-100",
+    title: "ServiceNow / Now Platform",
+    skills: ["App Engine", "Flow Designer", "UI Builder", "Glide / Scripting", "CSA (in progress)", "CAD (in progress)"],
+    color: "bg-primary/15",
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS", "Terraform", "Docker", "Firebase"],
+    skills: ["AWS", "Terraform", "Docker", "GitHub Actions", "Vercel", "CI/CD"],
     color: "bg-red-100",
   },
   {
-    title: "Data & AI",
-    skills: ["Generative AI", "LLM Evaluation", "Streamlit", "Pandas"],
-    color: "bg-green-100",
+    title: "Backend & Languages",
+    skills: ["Python", "TypeScript", "Java", "Kotlin", "PostgreSQL", "REST APIs"],
+    color: "bg-blue-100",
+  },
+  {
+    title: "Frontend & Full-Stack",
+    skills: ["React", "Next.js", "Vite", "Tailwind CSS", "SvelteKit", "Supabase"],
+    color: "bg-yellow-100",
   },
 ];
 
@@ -32,8 +32,7 @@ export function Skills() {
             Technical <span className="text-primary underline decoration-4 underline-offset-4">Arsenal</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl">
-            A comprehensive toolkit spanning frontend, backend, cloud, and AI development.
-            Building with the future stack.
+            Front-loaded on ServiceNow and DevOps — backed by a full-stack foundation in Python, TypeScript, and the cloud-native toolchain.
           </p>
         </div>
 

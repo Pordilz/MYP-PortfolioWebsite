@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.png";
 
 const terminalSteps = [
-  { command: "python3 skylogger.py --live", output: "Training AI Model... [Done] \n> SkyLogger: Live Aviation Dashboard ✈️" },
-  { command: "terraform apply vault", output: "Acquiring Lock... \n> The Vault: Secure Cloud Archive 🔒" },
-  { command: "./gradlew build ScentCast", output: "Compiling Assets... \n> ScentCast: Smart Fragrance App 💨" },
-  { command: "npm run deploy LinkHub", output: "Optimizing Build... \n> LinkHub: Centralized Portfolio 🔗" },
-  { command: "python3 numble_solver.py", output: "Calculating Solutions... \n> NumbleBot: Expression Finder 🔢" }
+  { command: "snow app create --scope x_riseup", output: "Building scoped app on Now Platform... \n> RiseUp with ServiceNow — Diana Programme" },
+  { command: "terraform apply vault", output: "Acquiring state lock... \n> The Vault: WORM-compliant AWS archive" },
+  { command: "docker compose up skylogger", output: "Spinning up containers... \n> SkyLogger: live aviation telemetry pipeline" },
+  { command: "vercel --prod vidmetrics", output: "Deploying to edge network... \n> VidMetrics: competitive YouTube intelligence" },
+  { command: "npm run build halaq", output: "Bundling client + API... \n> Halaq: Shariah-compliant investing platform" }
 ];
 
 function TypewriterTerminal() {
@@ -100,12 +100,15 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             <div className="inline-block px-3 py-1 bg-white border-2 border-black shadow-hard-sm rotate-[-2deg]">
-              <span className="text-xs font-bold font-mono text-primary">IU_STUDENT</span>
+              <span className="text-xs font-bold font-mono text-primary">SERVICENOW_DEV</span>
             </div>
             <div className="inline-block px-3 py-1 bg-white border-2 border-black shadow-hard-sm rotate-[1deg]">
-              <span className="text-xs font-bold font-mono text-secondary">AI_TRAINER</span>
+              <span className="text-xs font-bold font-mono text-secondary">DEVOPS_ENGINEER</span>
+            </div>
+            <div className="inline-block px-3 py-1 bg-white border-2 border-black shadow-hard-sm rotate-[-1deg]">
+              <span className="text-xs font-bold font-mono text-black">RISEUP_2026</span>
             </div>
           </div>
 
@@ -120,7 +123,7 @@ export function Hero() {
           </h1>
 
           <p className="text-xl text-muted-foreground font-light max-w-md border-l-4 border-black pl-4 py-1">
-            Junior Software Engineer specializing in Python, Cloud Infrastructure, and Data Solutions.
+            Junior Software Engineer pivoting into <span className="font-semibold text-black">ServiceNow development &amp; DevOps</span> — building on a foundation of Python, AWS, and IaC.
           </p>
 
           <div className="flex flex-col gap-8 pt-8 mb-8">
@@ -130,7 +133,7 @@ export function Hero() {
                 className="bg-black text-white hover:bg-primary border-2 border-black shadow-hard hover:translate-y-[2px] hover:shadow-hard-sm transition-all text-lg h-14 px-8"
                 onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                The Vault <ArrowRight className="ml-2 w-4 h-4" />
+                See Projects <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <a href={`${import.meta.env.BASE_URL}cv.pdf`} download="Muhammad_Paruk_CV.pdf">
                 <Button

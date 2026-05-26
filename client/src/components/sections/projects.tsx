@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, ExternalLink, Plane, Wind, ShieldCheck, Link as LinkIcon, Calculator, Database, Gamepad2 } from "lucide-react";
+import { ArrowUpRight, Github, ExternalLink, Plane, ShieldCheck, BarChart3, LineChart, Sparkles, CheckSquare, Wind } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import projectSkylogger from "@/assets/project-skylogger.png";
@@ -12,63 +12,69 @@ import projectApp from "@/assets/project-app.png";
 const projects = [
   {
     id: 1,
-    title: "SkyLogger: Live Aviation Dashboard",
-    category: "Cloud & Data",
-    description: "A containerized aviation telemetry dashboard that ingests real-time flight data from OpenSky Network into PostgreSQL and visualizes it with Streamlit.",
-    image: projectSkylogger,
-    tags: ["Streamlit", "PostgreSQL", "Docker", "Python"],
-    link: "https://github.com/Pordilz/skylogger-project",
-    icon: <Plane className="w-5 h-5" />
-  },
-  {
-    id: 2,
-    title: "The Vault: Secure Cloud Archive",
-    category: "Cloud Engineering",
-    description: "Secure cloud storage solution for sensitive data. Built on AWS using Terraform, enforcing a WORM model to prevent data tampering.",
+    title: "The Vault: Compliant Cloud Archive",
+    category: "DevOps / IaC",
+    description: "WORM-compliant document archive on AWS, fully provisioned with Terraform. S3 Object Lock, KMS encryption, and automated Glacier lifecycle policies for strict data governance.",
     image: projectVault,
-    tags: ["Terraform", "AWS", "Security", "WORM"],
+    tags: ["Terraform", "AWS", "S3 Object Lock", "KMS", "IaC"],
     link: "https://github.com/Pordilz/The-vault",
+    demo: null,
     icon: <ShieldCheck className="w-5 h-5" />
   },
   {
+    id: 2,
+    title: "SkyLogger: Aviation Telemetry Pipeline",
+    category: "DevOps / Data",
+    description: "Containerised data pipeline that ingests live flight data from the OpenSky Network into PostgreSQL and visualises it with Streamlit. Built to run anywhere via Docker Compose.",
+    image: projectSkylogger,
+    tags: ["Docker", "Python", "PostgreSQL", "Streamlit"],
+    link: "https://github.com/Pordilz/skylogger-project",
+    demo: null,
+    icon: <Plane className="w-5 h-5" />
+  },
+  {
     id: 3,
-    title: "ScentCast: Smart Fragrance App",
-    category: "Android Dev",
-    description: "Android app that recommends fragrances based on real-time weather data and personal digital libraries using a custom algorithm.",
-    image: projectScentcast,
-    tags: ["Android", "Kotlin", "Weather API", "Algorithm"],
-    link: "https://github.com/Pordilz/ScentCast",
-    icon: <Wind className="w-5 h-5" />
+    title: "VidMetrics: YouTube Intelligence",
+    category: "Full-Stack",
+    description: "Next.js dashboard that turns a YouTube channel URL into a competitive analytics view — KPI cards, sortable performance tables, engagement charts, and a publishing-cadence heatmap. Deployed on Vercel.",
+    image: projectData,
+    tags: ["Next.js", "TypeScript", "Chart.js", "YouTube API", "Vercel"],
+    link: "https://github.com/Pordilz/VidMetrics",
+    demo: "https://vidmetrics-git-main-yahyas-projects-cbbf0863.vercel.app/",
+    icon: <BarChart3 className="w-5 h-5" />
   },
   {
     id: 4,
-    title: "LinkHub: Centralized Portfolio",
-    category: "Web Dev",
-    description: "A centralized platform for users to share their portfolio of links, simplifying social media and project showcasing.",
+    title: "Halaq: Shariah-Compliant Investing",
+    category: "Full-Stack",
+    description: "A calm, premium platform helping Muslim investors screen equities against Shariah rules. React + Vite client, Express API, Supabase backing, Yahoo Finance data, and Lemon Squeezy billing.",
     image: projectCloud,
-    tags: ["SvelteKit", "Firebase", "Web"],
-    link: "https://github.com/Pordilz/LinkHub",
-    icon: <LinkIcon className="w-5 h-5" />
+    tags: ["React", "Express", "Supabase", "Lemon Squeezy", "Vite"],
+    link: "https://github.com/Pordilz/Halaq",
+    demo: null,
+    icon: <LineChart className="w-5 h-5" />
   },
   {
     id: 5,
-    title: "NumbleBot: Expression Finder",
-    category: "Python Dev",
-    description: "Python program that searches for equations using basic operations and parentheses to achieve a target answer from available numbers.",
-    image: projectData,
-    tags: ["Python", "Streamlit", "Algorithms"],
-    link: "https://github.com/Pordilz/Numble-bot",
-    icon: <Calculator className="w-5 h-5" />
+    title: "Habit Tracker (CLI)",
+    category: "Python Engineering",
+    description: "OOP + functional Python CLI for tracking daily and weekly habits — streak analytics, JSON persistence, and an interactive Questionary menu. Built as the IU Python Portfolio capstone.",
+    image: projectApp,
+    tags: ["Python", "OOP", "Questionary", "Analytics"],
+    link: "https://github.com/Pordilz/habit_tracker",
+    demo: null,
+    icon: <CheckSquare className="w-5 h-5" />
   },
   {
     id: 6,
-    title: "Pirate Platformer",
-    category: "Game Dev",
-    description: "Immersive 2D platformer game in a pirate-themed world with stunning graphics and smooth responsive controls.",
-    image: projectApp,
-    tags: ["Python", "Pygame", "2D Graphics"],
-    link: "https://github.com/Pordilz/Pirate-Platformer",
-    icon: <Gamepad2 className="w-5 h-5" />
+    title: "ScentCast: Smart Fragrance App",
+    category: "Android",
+    description: "Android assistant that recommends fragrances from your collection based on live local weather. Built with Kotlin, MVVM, Room, and Retrofit — clean architecture end-to-end.",
+    image: projectScentcast,
+    tags: ["Kotlin", "MVVM", "Room", "Retrofit"],
+    link: "https://github.com/Pordilz/ScentCast",
+    demo: null,
+    icon: <Wind className="w-5 h-5" />
   },
 ];
 
@@ -82,8 +88,12 @@ export function Projects() {
             <span className="absolute -top-6 -right-8 text-secondary font-hand text-xl rotate-12">Latest Work!</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            From secure cloud archives to interactive 2D games, here's a look at my engineering journey.
+            DevOps, IaC, and full-stack work that maps onto the ServiceNow developer toolkit — scoped apps, integrations, and platform-thinking.
           </p>
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 border-2 border-black shadow-hard-sm font-mono text-xs">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="font-bold">Now Platform builds shipping from the RiseUp Diana cohort — check back soon.</span>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -108,14 +118,18 @@ export function Projects() {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} on GitHub`}>
                     <Button size="icon" className="rounded-full bg-white text-black hover:bg-black hover:text-white border border-black shadow-md">
                       <Github className="w-5 h-5" />
                     </Button>
                   </a>
-                  <Button size="icon" className="rounded-full bg-white text-black hover:bg-black hover:text-white border border-black shadow-md">
-                    <ExternalLink className="w-5 h-5" />
-                  </Button>
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} live demo`}>
+                      <Button size="icon" className="rounded-full bg-white text-black hover:bg-black hover:text-white border border-black shadow-md">
+                        <ExternalLink className="w-5 h-5" />
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </div>
 

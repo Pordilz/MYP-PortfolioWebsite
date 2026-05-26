@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { User, Server, BarChart, GraduationCap, Briefcase, Target } from "lucide-react";
+import { User, Server, BarChart, GraduationCap, Briefcase, Workflow, Award } from "lucide-react";
 import profileSketch from "@/assets/profile-sketch.png";
 
 export function About() {
@@ -24,8 +24,12 @@ export function About() {
               </div>
               <div className="mt-6 space-y-4">
                 <div className="flex items-center gap-3 text-sm font-mono p-3 border border-black bg-gray-50 shadow-hard-sm">
+                  <Award className="w-4 h-4 text-primary" />
+                  <span>RiseUp w/ ServiceNow — Diana Programme</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-mono p-3 border border-black bg-gray-50 shadow-hard-sm">
                   <GraduationCap className="w-4 h-4 text-primary" />
-                  <span>IU International University</span>
+                  <span>BSc Computer Science — IU</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-mono p-3 border border-black bg-gray-50 shadow-hard-sm">
                   <Briefcase className="w-4 h-4 text-secondary" />
@@ -45,32 +49,40 @@ export function About() {
 
                 <div className="prose prose-lg text-muted-foreground">
                   <p>
-                    I'm <span className="text-black font-bold border-b-2 border-primary">Muhammad Yahya Paruk</span>, a Junior Software Engineer with a focus on Python development, cloud computing, and data-driven solutions.
+                    I'm <span className="text-black font-bold border-b-2 border-primary">Muhammad Yahya Paruk</span> — a Junior Software Engineer pivoting into <span className="text-black font-bold">ServiceNow development and DevOps</span>. My foundation is in Python, AWS, and Infrastructure-as-Code, and I'm now channelling that into the Now Platform.
                   </p>
                   <p>
-                    I manage the complete software lifecycle—from ideation to deployment. My experience spans building smart Android apps like <span className="font-medium text-black italic">ScentCast</span> to complex automation tools.
+                    I'm currently on the <span className="bg-yellow-100 text-black px-1 border border-black/20 font-medium rotate-1 inline-block">RiseUp with ServiceNow × Diana Award</span> programme — a fully-funded, 10-week intensive accelerator that pairs hands-on Now Platform experience with certification prep, mentoring, and direct access to hiring partners.
                   </p>
                   <p>
-                    Currently, I'm contributing as an <span className="bg-yellow-100 text-black px-1 border border-black/20 font-medium rotate-1 inline-block">AI Trainer</span> at Outlier, evaluating and correcting code in Java, Python, and JS to push the boundaries of LLMs.
+                    Alongside that, I'm an <span className="font-medium text-black italic">AI Trainer at Outlier</span>, evaluating and correcting code in Java, Python, JS and HTML/CSS to push the boundaries of LLM reasoning. My GitHub spans IaC on AWS (<span className="font-medium text-black">The Vault</span>), containerised data pipelines (<span className="font-medium text-black">SkyLogger</span>), and full-stack production apps (<span className="font-medium text-black">VidMetrics</span>, <span className="font-medium text-black">Halaq</span>).
                   </p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="p-6 border-2 border-black bg-gray-50 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
+                <div className="p-6 border-2 border-black bg-primary/5 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
                   <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
-                    <Server className="w-5 h-5 text-primary" /> Cloud & Infrastructure
+                    <Workflow className="w-5 h-5 text-primary" /> ServiceNow / Now Platform
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Specialize in AWS and Terraform (IaC) to build compliant, immutable, and scalable cloud solutions.
+                    RiseUp Diana cohort 2026. Building scoped apps with App Engine, Flow Designer, and UI Builder while working toward CSA + CAD.
                   </p>
                 </div>
-                <div className="p-6 border-2 border-black bg-white shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
+                <div className="p-6 border-2 border-black bg-gray-50 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
                   <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
-                    <BarChart className="w-5 h-5 text-secondary" /> AI & Data Science
+                    <Server className="w-5 h-5 text-primary" /> Cloud & DevOps
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Experienced in AI model evaluation, generative AI, and PostgreSQL database design.
+                    AWS + Terraform for compliant, immutable infra. Docker for portable services, GitHub Actions for CI/CD, Vercel for edge deploys.
+                  </p>
+                </div>
+                <div className="p-6 border-2 border-black bg-white shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all sm:col-span-2">
+                  <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
+                    <BarChart className="w-5 h-5 text-secondary" /> Engineering Foundation
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Python, TypeScript, React/Next.js, PostgreSQL, REST APIs, and AI model evaluation — the toolkit I bring into every Now Platform integration.
                   </p>
                 </div>
               </div>
