@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.png";
 
 const terminalSteps = [
-  { command: "snow app create --scope x_riseup", output: "Building scoped app on Now Platform... \n> RiseUp with ServiceNow — Diana Programme" },
-  { command: "terraform apply vault", output: "Acquiring state lock... \n> The Vault: WORM-compliant AWS archive" },
-  { command: "docker compose up skylogger", output: "Spinning up containers... \n> SkyLogger: live aviation telemetry pipeline" },
-  { command: "vercel --prod vidmetrics", output: "Deploying to edge network... \n> VidMetrics: competitive YouTube intelligence" },
-  { command: "npm run build halaq", output: "Bundling client + API... \n> Halaq: Shariah-compliant investing platform" }
+  { command: "python -m skylogger.ingest --live", output: "OpenSky → PostgreSQL, 1,247 rows/min... \n> SkyLogger: containerised telemetry pipeline" },
+  { command: "pnpm dev ifrs-ledger", output: "Next.js 16, Gemini via AI SDK, Zod schemas... \n> The Ledger: structured output accounting reasoner" },
+  { command: "terraform apply vault", output: "Acquiring state lock... \n> The Vault: WORM compliant AWS archive" },
+  { command: "psql -f iu_data_mart.sql", output: "20 tables, foreign keys, indexes... \n> IU Data Mart: SQL schema design capstone" },
+  { command: "snow app deploy --scope x_agrilink", output: "Publishing scoped app to the Now Platform... \n> AgriLink: RiseUp capstone, server-side state machine" },
+  { command: "./gradlew assembleRelease", output: "Kotlin + MVVM + Room build... \n> ScentCast: weather-aware fragrance assistant" }
 ];
 
 function TypewriterTerminal() {
@@ -102,13 +103,16 @@ export function Hero() {
         >
           <div className="flex flex-wrap gap-3">
             <div className="inline-block px-3 py-1 bg-white border-2 border-black shadow-hard-sm rotate-[-2deg]">
-              <span className="text-xs font-bold font-mono text-primary">SERVICENOW_DEV</span>
+              <span className="text-xs font-bold font-mono text-primary">SOFTWARE_ENGINEER</span>
             </div>
             <div className="inline-block px-3 py-1 bg-white border-2 border-black shadow-hard-sm rotate-[1deg]">
-              <span className="text-xs font-bold font-mono text-secondary">DEVOPS_ENGINEER</span>
+              <span className="text-xs font-bold font-mono text-secondary">DEVOPS_&_CLOUD</span>
             </div>
             <div className="inline-block px-3 py-1 bg-white border-2 border-black shadow-hard-sm rotate-[-1deg]">
-              <span className="text-xs font-bold font-mono text-black">RISEUP_2026</span>
+              <span className="text-xs font-bold font-mono text-black">DATA_&_AI</span>
+            </div>
+            <div className="inline-block px-3 py-1 bg-white border-2 border-black shadow-hard-sm rotate-[2deg]">
+              <span className="text-xs font-bold font-mono text-primary">SERVICENOW_CSA</span>
             </div>
           </div>
 
@@ -123,7 +127,7 @@ export function Hero() {
           </h1>
 
           <p className="text-xl text-muted-foreground font-light max-w-md border-l-4 border-black pl-4 py-1">
-            Junior Software Engineer pivoting into <span className="font-semibold text-black">ServiceNow development &amp; DevOps</span> — building on a foundation of Python, AWS, and IaC.
+            <span className="font-semibold text-black">Software engineer</span>. Full stack, DevOps on AWS, data pipelines, LLM apps, and ServiceNow (CSA).
           </p>
 
           <div className="flex flex-col gap-8 pt-8 mb-8">
@@ -171,7 +175,7 @@ export function Hero() {
             <div className="relative z-10 border-4 border-black bg-white p-3 shadow-hard rotate-2 group-hover:rotate-0 transition-transform duration-500">
               <img
                 src={heroBg}
-                alt="Developer Coding Sketch"
+                alt="Software Engineer Coding Sketch"
                 className="w-full h-auto object-cover border-2 border-black grayscale group-hover:grayscale-0 transition-all duration-500"
               />
 

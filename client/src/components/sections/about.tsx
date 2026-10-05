@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { User, Server, BarChart, GraduationCap, Briefcase, Workflow, Award } from "lucide-react";
+import { User, Server, BarChart, GraduationCap, Briefcase, Workflow, Award, Code2, Database, Sparkles } from "lucide-react";
 import profileSketch from "@/assets/profile-sketch.png";
 
 export function About() {
@@ -25,15 +25,19 @@ export function About() {
               <div className="mt-6 space-y-4">
                 <div className="flex items-center gap-3 text-sm font-mono p-3 border border-black bg-gray-50 shadow-hard-sm">
                   <Award className="w-4 h-4 text-primary" />
-                  <span>RiseUp w/ ServiceNow — Diana Programme</span>
+                  <span>ServiceNow CSA — Certified Sep 2026</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-mono p-3 border border-black bg-gray-50 shadow-hard-sm">
                   <GraduationCap className="w-4 h-4 text-primary" />
-                  <span>BSc Computer Science — IU</span>
+                  <span>BSc Software Development — IU (2026)</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-mono p-3 border border-black bg-gray-50 shadow-hard-sm">
+                  <Award className="w-4 h-4 text-primary" />
+                  <span>RiseUp ServiceNow Alumni — Jun 2026</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-mono p-3 border border-black bg-gray-50 shadow-hard-sm">
                   <Briefcase className="w-4 h-4 text-secondary" />
-                  <span>AI Trainer @ Outlier</span>
+                  <span>AI Code Evaluator @ Outlier</span>
                 </div>
               </div>
             </div>
@@ -49,40 +53,56 @@ export function About() {
 
                 <div className="prose prose-lg text-muted-foreground">
                   <p>
-                    I'm <span className="text-black font-bold border-b-2 border-primary">Muhammad Yahya Paruk</span> — a Junior Software Engineer pivoting into <span className="text-black font-bold">ServiceNow development and DevOps</span>. My foundation is in Python, AWS, and Infrastructure-as-Code, and I'm now channelling that into the Now Platform.
+                    I'm <span className="text-black font-bold border-b-2 border-primary">Muhammad Yahya Paruk</span>, a <span className="text-black font-bold">software engineer</span> based in Durban, South Africa. I work end to end: Python and TypeScript backends, React and Next.js on the front, PostgreSQL behind, Docker and Terraform in CI, LLMs wired in with structured output.
                   </p>
                   <p>
-                    I'm currently on the <span className="bg-yellow-100 text-black px-1 border border-black/20 font-medium rotate-1 inline-block">RiseUp with ServiceNow × Diana Award</span> programme — a fully-funded, 10-week intensive accelerator that pairs hands-on Now Platform experience with certification prep, mentoring, and direct access to hiring partners.
+                    Nearly two years at <span className="font-medium text-black italic">Outlier</span> reviewing AI-generated Python, Java, JavaScript, and SQL. Shipped LLM work in <span className="font-medium text-black">The Ledger</span> (Next.js 16 + Gemini + Zod). DevOps and data in <span className="font-medium text-black">The Vault</span> (Terraform on AWS) and <span className="font-medium text-black">SkyLogger</span> (Dockerised Python pipeline into PostgreSQL).
                   </p>
                   <p>
-                    Alongside that, I'm an <span className="font-medium text-black italic">AI Trainer at Outlier</span>, evaluating and correcting code in Java, Python, JS and HTML/CSS to push the boundaries of LLM reasoning. My GitHub spans IaC on AWS (<span className="font-medium text-black">The Vault</span>), containerised data pipelines (<span className="font-medium text-black">SkyLogger</span>), and full-stack production apps (<span className="font-medium text-black">VidMetrics</span>, <span className="font-medium text-black">Halaq</span>).
+                    Also a <span className="bg-yellow-100 text-black px-1 border border-black/20 font-medium rotate-1 inline-block">ServiceNow Certified System Administrator</span> and lead developer on <span className="font-medium text-black">AgriLink</span>, the RiseUp capstone scoped app. CAD in progress.
                   </p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="p-6 border-2 border-black bg-primary/5 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
+                <div className="p-6 border-2 border-black bg-white shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
                   <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
-                    <Workflow className="w-5 h-5 text-primary" /> ServiceNow / Now Platform
+                    <Code2 className="w-5 h-5 text-primary" /> Software Engineering
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    RiseUp Diana cohort 2026. Building scoped apps with App Engine, Flow Designer, and UI Builder while working toward CSA + CAD.
+                    Python, TypeScript, Java, Kotlin, SQL. Full stack web with React, Next.js, Express, and Supabase.
                   </p>
                 </div>
                 <div className="p-6 border-2 border-black bg-gray-50 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
                   <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
-                    <Server className="w-5 h-5 text-primary" /> Cloud & DevOps
+                    <Server className="w-5 h-5 text-primary" /> DevOps & Cloud
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    AWS + Terraform for compliant, immutable infra. Docker for portable services, GitHub Actions for CI/CD, Vercel for edge deploys.
+                    AWS with Terraform, Docker Compose, GitHub Actions, and Vercel for edge deploys.
                   </p>
                 </div>
-                <div className="p-6 border-2 border-black bg-white shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all sm:col-span-2">
+                <div className="p-6 border-2 border-black bg-blue-50 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
                   <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
-                    <BarChart className="w-5 h-5 text-secondary" /> Engineering Foundation
+                    <Database className="w-5 h-5 text-secondary" /> Data Engineering
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Python, TypeScript, React/Next.js, PostgreSQL, REST APIs, and AI model evaluation — the toolkit I bring into every Now Platform integration.
+                    PostgreSQL schema design, Supabase and Drizzle ORM in production, API ingestion pipelines on Docker.
+                  </p>
+                </div>
+                <div className="p-6 border-2 border-black bg-primary/5 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all">
+                  <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-primary" /> AI & LLM Engineering
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Gemini on Next.js via the Vercel AI SDK with Zod structured output. Two years of AI code evaluation at Outlier.
+                  </p>
+                </div>
+                <div className="p-6 border-2 border-black bg-yellow-50 shadow-hard hover:translate-x-1 hover:-translate-y-1 transition-all sm:col-span-2">
+                  <h3 className="font-heading font-bold text-xl mb-3 flex items-center gap-2">
+                    <Workflow className="w-5 h-5 text-primary" /> ServiceNow / Now Platform
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    CSA certified. Scoped apps with App Engine Studio, Flow Designer, Scripted REST, ACLs, and server-side state machines. CAD in progress.
                   </p>
                 </div>
               </div>

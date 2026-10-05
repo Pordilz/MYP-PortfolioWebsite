@@ -70,7 +70,7 @@ export function Contact() {
             <div>
               <h2 className="text-4xl font-heading font-bold mb-6">Connect & Collaborate</h2>
               <p className="text-muted-foreground mb-8 text-lg">
-                Hiring for a ServiceNow developer, DevOps engineer, or RiseUp graduate role? Let's talk.
+                Hiring in SA? Durban-based, willing to relocate, Cape Town preferred. Let's talk.
               </p>
 
               <div className="space-y-4">
@@ -165,7 +165,7 @@ export function Contact() {
         </div>
 
         <footer className="mt-20 pt-8 border-t-2 border-black/10 text-center text-muted-foreground text-xs font-mono">
-          <p>© {new Date().getFullYear()} Muhammad Yahya Paruk — ServiceNow Developer & DevOps Engineer in the making.</p>
+          <p>© {new Date().getFullYear()} Muhammad Yahya Paruk — Software Engineer. BSc Software Development, ServiceNow CSA. Durban, South Africa.</p>
         </footer>
       </div>
     </section>

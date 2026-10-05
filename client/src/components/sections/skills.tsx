@@ -2,24 +2,29 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "ServiceNow / Now Platform",
-    skills: ["App Engine", "Flow Designer", "UI Builder", "Glide / Scripting", "CSA (in progress)", "CAD (in progress)"],
+    title: "Software Engineering",
+    skills: ["Python", "TypeScript", "Java", "Kotlin", "SQL", "React", "Next.js", "Node.js", "Android", "REST APIs"],
     color: "bg-primary/15",
   },
   {
-    title: "Cloud & DevOps",
-    skills: ["AWS", "Terraform", "Docker", "GitHub Actions", "Vercel", "CI/CD"],
+    title: "DevOps & Cloud",
+    skills: ["AWS", "Terraform", "Docker", "GitHub Actions", "CI/CD", "Vercel"],
     color: "bg-red-100",
   },
   {
-    title: "Backend & Languages",
-    skills: ["Python", "TypeScript", "Java", "Kotlin", "PostgreSQL", "REST APIs"],
+    title: "Data Engineering",
+    skills: ["PostgreSQL", "Schema design", "Supabase", "Drizzle ORM", "API ingestion", "Streamlit"],
     color: "bg-blue-100",
   },
   {
-    title: "Frontend & Full-Stack",
-    skills: ["React", "Next.js", "Vite", "Tailwind CSS", "SvelteKit", "Supabase"],
+    title: "AI & LLM Engineering",
+    skills: ["Vercel AI SDK", "Google Gemini", "Zod structured output", "Prompt engineering", "AI code evaluation"],
     color: "bg-yellow-100",
+  },
+  {
+    title: "ServiceNow",
+    skills: ["CSA (certified)", "CAD (in progress)", "App Engine Studio", "Flow Designer", "Scripted REST", "ACLs", "ATF", "HRSD"],
+    color: "bg-primary/15",
   },
 ];
 
@@ -32,11 +37,11 @@ export function Skills() {
             Technical <span className="text-primary underline decoration-4 underline-offset-4">Arsenal</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl">
-            Front-loaded on ServiceNow and DevOps — backed by a full-stack foundation in Python, TypeScript, and the cloud-native toolchain.
+            Full stack, DevOps, data, and AI. ServiceNow as a certified specialisation.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}

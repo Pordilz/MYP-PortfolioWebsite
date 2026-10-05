@@ -43,7 +43,7 @@ export function Navigation() {
             <h1 className="text-2xl font-heading font-bold tracking-tighter">
               M<span className="text-primary">.</span>PARUK
             </h1>
-            <p className="text-xs text-muted-foreground font-hand mt-1">ServiceNow Dev · DevOps</p>
+            <p className="text-xs text-muted-foreground font-hand mt-1">Software Engineer · AI · DevOps</p>
           </div>
 
           <div className="flex flex-col gap-4 flex-1">

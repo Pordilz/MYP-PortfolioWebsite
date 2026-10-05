@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, ExternalLink, Plane, ShieldCheck, BarChart3, LineChart, Sparkles, CheckSquare, Wind } from "lucide-react";
+import { ArrowUpRight, Github, ExternalLink, Plane, ShieldCheck, BarChart3, LineChart, Sparkles, Wind, Workflow, BookOpen } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import projectSkylogger from "@/assets/project-skylogger.png";
@@ -8,35 +8,58 @@ import projectScentcast from "@/assets/project-scentcast.png";
 import projectCloud from "@/assets/project-cloud.png";
 import projectData from "@/assets/project-data.png";
 import projectApp from "@/assets/project-app.png";
+import projectAgrilink from "@/assets/project-agrilink.jpg";
 
 const projects = [
   {
     id: 1,
+    title: "AgriLink: ServiceNow Scoped App",
+    category: "ServiceNow / Full-Stack",
+    description: "Lead on the RiseUp capstone: a farmer to buyer marketplace on the Now Platform. App Engine Studio, Flow Designer, Scripted REST, ACLs, and a server-side state machine for the order lifecycle.",
+    image: projectAgrilink,
+    tags: ["ServiceNow", "App Engine", "Flow Designer", "Scripted REST", "ACLs"],
+    link: "https://github.com/Pordilz",
+    demo: null,
+    icon: <Workflow className="w-5 h-5" />
+  },
+  {
+    id: 2,
     title: "The Vault: Compliant Cloud Archive",
     category: "DevOps / IaC",
-    description: "WORM-compliant document archive on AWS, fully provisioned with Terraform. S3 Object Lock, KMS encryption, and automated Glacier lifecycle policies for strict data governance.",
+    description: "WORM compliant document archive on AWS, fully provisioned with Terraform. S3 Object Lock, KMS encryption, least privilege IAM, and automated Glacier lifecycle policies for strict data governance.",
     image: projectVault,
-    tags: ["Terraform", "AWS", "S3 Object Lock", "KMS", "IaC"],
+    tags: ["Terraform", "AWS", "S3 Object Lock", "KMS", "IAM"],
     link: "https://github.com/Pordilz/The-vault",
     demo: null,
     icon: <ShieldCheck className="w-5 h-5" />
   },
   {
-    id: 2,
+    id: 3,
     title: "SkyLogger: Aviation Telemetry Pipeline",
-    category: "DevOps / Data",
-    description: "Containerised data pipeline that ingests live flight data from the OpenSky Network into PostgreSQL and visualises it with Streamlit. Built to run anywhere via Docker Compose.",
+    category: "Backend / Data",
+    description: "Python microservices that ingest live flight data from the OpenSky Network into PostgreSQL and visualise it with Streamlit. Unit tests and GitHub Actions keep it green, Docker Compose keeps it portable.",
     image: projectSkylogger,
-    tags: ["Docker", "Python", "PostgreSQL", "Streamlit"],
+    tags: ["Docker", "Python", "PostgreSQL", "Streamlit", "GitHub Actions"],
     link: "https://github.com/Pordilz/skylogger-project",
     demo: null,
     icon: <Plane className="w-5 h-5" />
   },
   {
-    id: 3,
+    id: 4,
+    title: "The Ledger: AI Accounting Reasoner",
+    category: "AI / Full-Stack",
+    description: "Next.js 16 teaching ledger. Describe a transaction, get balanced journal entries, statement effects, IFRS notes, and SA tax treatment. Gemini via the Vercel AI SDK with Zod structured output.",
+    image: projectCloud,
+    tags: ["Next.js 16", "Gemini", "Vercel AI SDK", "Zod", "TypeScript"],
+    link: "https://github.com/Pordilz/ifrs-ledger",
+    demo: null,
+    icon: <BookOpen className="w-5 h-5" />
+  },
+  {
+    id: 5,
     title: "VidMetrics: YouTube Intelligence",
     category: "Full-Stack",
-    description: "Next.js dashboard that turns a YouTube channel URL into a competitive analytics view — KPI cards, sortable performance tables, engagement charts, and a publishing-cadence heatmap. Deployed on Vercel.",
+    description: "Next.js dashboard that turns a YouTube channel URL into KPI cards, performance tables, engagement charts, and a publishing cadence heatmap. Deployed on Vercel.",
     image: projectData,
     tags: ["Next.js", "TypeScript", "Chart.js", "YouTube API", "Vercel"],
     link: "https://github.com/Pordilz/VidMetrics",
@@ -44,32 +67,21 @@ const projects = [
     icon: <BarChart3 className="w-5 h-5" />
   },
   {
-    id: 4,
-    title: "Halaq: Shariah-Compliant Investing",
+    id: 6,
+    title: "Halaq: Shariah Equity Screener",
     category: "Full-Stack",
-    description: "A calm, premium platform helping Muslim investors screen equities against Shariah rules. React + Vite client, Express API, Supabase backing, Yahoo Finance data, and Lemon Squeezy billing.",
-    image: projectCloud,
-    tags: ["React", "Express", "Supabase", "Lemon Squeezy", "Vite"],
+    description: "Screens JSE and global equities against Shariah rules. React + Vite client, Express API, Supabase backing, Yahoo Finance data, and Lemon Squeezy billing. Packaged for Android with Capacitor.",
+    image: projectApp,
+    tags: ["React", "Express", "Supabase", "Yahoo Finance", "Capacitor"],
     link: "https://github.com/Pordilz/Halaq",
     demo: null,
     icon: <LineChart className="w-5 h-5" />
   },
   {
-    id: 5,
-    title: "Habit Tracker (CLI)",
-    category: "Python Engineering",
-    description: "OOP + functional Python CLI for tracking daily and weekly habits — streak analytics, JSON persistence, and an interactive Questionary menu. Built as the IU Python Portfolio capstone.",
-    image: projectApp,
-    tags: ["Python", "OOP", "Questionary", "Analytics"],
-    link: "https://github.com/Pordilz/habit_tracker",
-    demo: null,
-    icon: <CheckSquare className="w-5 h-5" />
-  },
-  {
-    id: 6,
+    id: 7,
     title: "ScentCast: Smart Fragrance App",
     category: "Android",
-    description: "Android assistant that recommends fragrances from your collection based on live local weather. Built with Kotlin, MVVM, Room, and Retrofit — clean architecture end-to-end.",
+    description: "Android assistant that recommends fragrances from your collection based on live local weather. Built with Kotlin, MVVM, Room, and Retrofit, clean architecture end to end.",
     image: projectScentcast,
     tags: ["Kotlin", "MVVM", "Room", "Retrofit"],
     link: "https://github.com/Pordilz/ScentCast",
@@ -88,11 +100,11 @@ export function Projects() {
             <span className="absolute -top-6 -right-8 text-secondary font-hand text-xl rotate-12">Latest Work!</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            DevOps, IaC, and full-stack work that maps onto the ServiceNow developer toolkit — scoped apps, integrations, and platform-thinking.
+            Full stack, DevOps, data, AI, Android, and ServiceNow.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 border-2 border-black shadow-hard-sm font-mono text-xs">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="font-bold">Now Platform builds shipping from the RiseUp Diana cohort — check back soon.</span>
+            <span className="font-bold">Based in Durban, SA. CSA certified Sep 2026. CAD in progress.</span>
           </div>
         </div>
 
